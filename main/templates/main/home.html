@@ -1,0 +1,37 @@
+{% extends "main/wrapper.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="container">
+  <div class="slider">
+    <img src="{% static "img/smile-large.jpg" %}" alt=>
+  </div>
+</div>
+
+
+<div class="background">
+<h1>Последнии публицакции</h1>
+
+
+  <div class="grid">
+{% for news in newses %}
+<div>
+      <div class="news_photo">
+        {% if news.photo %}
+        <img src="{{ news.photo.url }}" alt="{{ news.name }}">
+        {% endif %}
+      </div>
+      <h4> {{ news.name }} </h4>
+      <h5>{{ news.description }} <a href="{{ news.url }}">ссылка</a></h5>
+        <p> Опубликованно: {{ news.date }} </p>
+      <p> Рейтинг новости {{ news.rating }} </p>
+
+</div>
+{% endfor %}
+
+  </div>
+
+
+</div>
+
+{% endblock %}

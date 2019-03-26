@@ -1,0 +1,26 @@
+{% extends "main/wrapper.html" %}
+{% block content %}
+<div class="container">
+
+
+
+
+<script src='https://static.zakon.kz/zakon_cache/widgets/v1/popular.utf8.js' charset='utf-8'></script>
+<style>.zakon_informer_hor_img{width:100%;padding:10px 0 0;clear:both;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;border:1px solid #e9edf1;background:#fff}.zakon_informer_hor_img .header_zakon{position:relative;font-family:arial;font-weight:700;text-align:left;padding:0 0 3px;border-bottom:1px solid #e3e8ed;font-size:16px;color:#333;margin:0 10px}.zakon_informer_hor_img .header_zakon:before{content:'';width:100px;height:1px;position:absolute;left:0;bottom:-1px;background-color:#6FABC6}.zakon_informer_hor_img .header_zakon span{letter-spacing:-1px}.zakon_informer_hor_img .header_zakon a{float:right;font-weight:400;text-decoration:underline;color:#6FABC6;position:relative;top:2px;font-size:12px}.zakon_informer_hor_img .header_zakon a:hover{color:#333}.zakon_informer_hor_img ul{margin:0;padding:0;display:table;width:100%;table-layout:fixed;border-spacing:10px;border-collapse:separate}.zakon_informer_hor_img ul li{display:table-cell;width:100%;list-style-type:none;margin:0;padding:0;text-align:left}.zakon_informer_hor_img ul li a{display:block;text-decoration:none;font-size:12px;line-height:15px}.zakon_informer_hor_img ul li a img{width:100%;display:block;opacity:.8;margin:0;padding:0;border:none}.zakon_informer_hor_img ul li a span{display:block;display:-webkit-box;-webkit-line-clamp:3;text-overflow:ellipsis;padding:5px 10px;height:70px;font-family:tahoma,arial;overflow:hidden;color:#333;border-bottom:3px solid #e4e9ee;background:#eff2f5;transition:all .15s linear;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.zakon_informer_hor_img ul li a:hover span{text-decoration:underline}.zakon_informer_hor_img ul li a:hover img{opacity:1}</style><script>(function(w, rubric, limit) {		var data = w[rubric]; if (!data || !data.length) { return;} var status = w['z_status']; var msg = w['z_msg'];		function formatDate(ts) {var d = new Date(ts * 1000);return d.getHours() + ':' + ('0' + d.getMinutes()).substr(-2);}		if(data.length < limit) { limit = data.length;}var html = "";html += '<div class=zakon_informer_hor_img><div class=header_zakon><span>НОВОСТИ</span><a target="_blank" href="https://www.zakon.kz/">Все новости</a></div><ul>';for (var i = 0; i < limit; i++) { html += '<li><a target="_blank" href="'+ data[i].link +'&utm_source='+encodeURI(location.hostname)+'"><img src="'+ data[i].img_medium +'"/><span>'+ data[i].title +'</span></a></li>';}html += '</ul></div>';if(status != 1) {console.log('zInformer error:'+msg+status);}		document.write(html);	}(window, 'z_news_popular', 4));</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}
